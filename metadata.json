@@ -1,0 +1,6 @@
+{
+  "name": "TaskFlow - REST API & Backoffice",
+  "description": "API REST professionnelle TaskFlow conçue avec Node.js, Express, documentation Swagger OpenAPI et Backoffice d'administration pour la gestion des projets, des équipes et des tâches.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

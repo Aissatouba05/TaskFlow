@@ -1,0 +1,242 @@
+{
+  "users": [
+    {
+      "id": "usr-admin-001",
+      "name": "Amadou Sow (Admin)",
+      "email": "admin@taskflow.dev",
+      "passwordHash": "$2b$10$QcAWokyomp4rCif6hjsHZOlBd4UqVL3JQlOD.YC/60NgrfP6x01ye",
+      "role": "ADMIN",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "department": "Direction Technique & Sécurité",
+      "createdAt": "2026-10-01T08:00:00.000Z",
+      "updatedAt": "2026-10-01T08:00:00.000Z"
+    },
+    {
+      "id": "usr-sarah-002",
+      "name": "Sarah Diallo",
+      "email": "sarah.diallo@taskflow.dev",
+      "passwordHash": "$2b$10$.toD1r6FsEKh1HjCzsci..Y0jRaUr7HpZTlrgYKSmj2Ec5uxFGfkm",
+      "role": "USER",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "department": "Gestion de Projet",
+      "createdAt": "2026-10-02T09:30:00.000Z",
+      "updatedAt": "2026-10-02T09:30:00.000Z"
+    },
+    {
+      "id": "usr-mamadou-003",
+      "name": "Mamadou Fall",
+      "email": "mamadou.fall@taskflow.dev",
+      "passwordHash": "$2b$10$.toD1r6FsEKh1HjCzsci..Y0jRaUr7HpZTlrgYKSmj2Ec5uxFGfkm",
+      "role": "USER",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "department": "Ingénierie Backend",
+      "createdAt": "2026-10-03T11:00:00.000Z",
+      "updatedAt": "2026-10-03T11:00:00.000Z"
+    },
+    {
+      "id": "usr-aissatou-004",
+      "name": "Aissatou Ba",
+      "email": "aissatou.ba@taskflow.dev",
+      "passwordHash": "$2b$10$.toD1r6FsEKh1HjCzsci..Y0jRaUr7HpZTlrgYKSmj2Ec5uxFGfkm",
+      "role": "USER",
+      "avatar": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150&auto=format&fit=crop&q=80",
+      "department": "Développement Full-Stack",
+      "createdAt": "2026-10-04T14:15:00.000Z",
+      "updatedAt": "2026-10-04T14:15:00.000Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": "prj-taskflow-api",
+      "title": "TaskFlow REST API & Swagger Core",
+      "description": "Conception et déploiement de l’architecture API Node.js/Express avec Swagger, gestion des rôles et sécurisation JWT.",
+      "ownerId": "usr-admin-001",
+      "status": "ACTIVE",
+      "members": [
+        {
+          "userId": "usr-admin-001",
+          "role": "OWNER",
+          "joinedAt": "2026-10-01T08:00:00.000Z"
+        },
+        {
+          "userId": "usr-sarah-002",
+          "role": "LEAD",
+          "joinedAt": "2026-10-02T10:00:00.000Z"
+        },
+        {
+          "userId": "usr-mamadou-003",
+          "role": "MEMBER",
+          "joinedAt": "2026-10-03T11:30:00.000Z"
+        },
+        {
+          "userId": "usr-aissatou-004",
+          "role": "MEMBER",
+          "joinedAt": "2026-10-04T15:00:00.000Z"
+        }
+      ],
+      "createdAt": "2026-10-05T08:00:00.000Z",
+      "updatedAt": "2026-10-18T16:00:00.000Z"
+    },
+    {
+      "id": "prj-mobile-redesign",
+      "title": "TaskFlow Mobile Application (Flutter/React Native)",
+      "description": "Refonte de l’expérience utilisateur mobile pour la gestion nomade des tâches et notifications push en temps réel.",
+      "ownerId": "usr-sarah-002",
+      "status": "PLANNING",
+      "members": [
+        {
+          "userId": "usr-sarah-002",
+          "role": "OWNER",
+          "joinedAt": "2026-10-06T09:00:00.000Z"
+        },
+        {
+          "userId": "usr-aissatou-004",
+          "role": "MEMBER",
+          "joinedAt": "2026-10-07T14:00:00.000Z"
+        }
+      ],
+      "createdAt": "2026-10-06T09:00:00.000Z",
+      "updatedAt": "2026-10-15T12:00:00.000Z"
+    },
+    {
+      "id": "prj-cloud-migration",
+      "title": "Migration Cloud & Pipeline CI/CD (Render + Vercel)",
+      "description": "Automatisation des tests, conteneurisation Docker et déploiement haute disponibilité de la plateforme.",
+      "ownerId": "usr-mamadou-003",
+      "status": "ACTIVE",
+      "members": [
+        {
+          "userId": "usr-mamadou-003",
+          "role": "OWNER",
+          "joinedAt": "2026-10-10T10:00:00.000Z"
+        },
+        {
+          "userId": "usr-admin-001",
+          "role": "LEAD",
+          "joinedAt": "2026-10-10T10:00:00.000Z"
+        }
+      ],
+      "createdAt": "2026-10-10T10:00:00.000Z",
+      "updatedAt": "2026-10-20T17:45:00.000Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "tsk-001",
+      "projectId": "prj-taskflow-api",
+      "title": "Implémenter le middleware d’authentification JWT",
+      "description": "Vérifier la validité des tokens Bearer JWT et injecter req.user avec le payload décodé.",
+      "status": "DONE",
+      "priority": "HIGH",
+      "dueDate": "2026-10-12T18:00:00.000Z",
+      "assignedTo": "usr-mamadou-003",
+      "createdById": "usr-admin-001",
+      "createdAt": "2026-10-06T08:30:00.000Z",
+      "updatedAt": "2026-10-11T16:20:00.000Z"
+    },
+    {
+      "id": "tsk-002",
+      "projectId": "prj-taskflow-api",
+      "title": "Rédiger la spécification Swagger OpenAPI 3.0",
+      "description": "Documenter tous les endpoints, paramètres, schémas User/Project/Task et codes HTTP 200 à 500.",
+      "status": "IN_PROGRESS",
+      "priority": "HIGH",
+      "dueDate": "2026-10-25T18:00:00.000Z",
+      "assignedTo": "usr-aissatou-004",
+      "createdById": "usr-sarah-002",
+      "createdAt": "2026-10-07T09:00:00.000Z",
+      "updatedAt": "2026-10-21T10:15:00.000Z"
+    },
+    {
+      "id": "tsk-003",
+      "projectId": "prj-taskflow-api",
+      "title": "Module de statistiques et calcul des retards",
+      "description": "Calculer en temps réel le total des projets, tâches achevées, tâches en cours et tâches en retard.",
+      "status": "DONE",
+      "priority": "MEDIUM",
+      "dueDate": "2026-10-15T18:00:00.000Z",
+      "assignedTo": "usr-mamadou-003",
+      "createdById": "usr-admin-001",
+      "createdAt": "2026-10-08T11:00:00.000Z",
+      "updatedAt": "2026-10-14T17:00:00.000Z"
+    },
+    {
+      "id": "tsk-004",
+      "projectId": "prj-taskflow-api",
+      "title": "Audit de sécurité & hachage des mots de passe",
+      "description": "Vérifier l’absence d’exposition de hash dans les retours API et valider les entrées utilisateur.",
+      "status": "DONE",
+      "priority": "HIGH",
+      "dueDate": "2026-10-14T12:00:00.000Z",
+      "assignedTo": "usr-admin-001",
+      "createdById": "usr-admin-001",
+      "createdAt": "2026-10-08T14:00:00.000Z",
+      "updatedAt": "2026-10-13T15:30:00.000Z"
+    },
+    {
+      "id": "tsk-005",
+      "projectId": "prj-taskflow-api",
+      "title": "Validation des données avec schéma strict (titre, statut, priorités)",
+      "description": "Rejeter les requêtes malformées avec HTTP 400 et un message d’erreur explicite.",
+      "status": "IN_PROGRESS",
+      "priority": "MEDIUM",
+      "dueDate": "2026-10-26T18:00:00.000Z",
+      "assignedTo": "usr-aissatou-004",
+      "createdById": "usr-sarah-002",
+      "createdAt": "2026-10-09T10:00:00.000Z",
+      "updatedAt": "2026-10-20T11:00:00.000Z"
+    },
+    {
+      "id": "tsk-006",
+      "projectId": "prj-mobile-redesign",
+      "title": "Maquettes Figma de la vue Kanban mobile",
+      "description": "Concevoir l’interface tactile de déplacement des cartes et des filtres de priorité.",
+      "status": "TODO",
+      "priority": "MEDIUM",
+      "dueDate": "2026-10-20T18:00:00.000Z",
+      "assignedTo": "usr-sarah-002",
+      "createdById": "usr-sarah-002",
+      "createdAt": "2026-10-11T13:00:00.000Z",
+      "updatedAt": "2026-10-11T13:00:00.000Z"
+    },
+    {
+      "id": "tsk-007",
+      "projectId": "prj-mobile-redesign",
+      "title": "Synchronisation hors-ligne des tâches avec WatermelonDB",
+      "description": "Permettre aux équipes terrain de consulter et modifier leurs tâches sans connexion active.",
+      "status": "TODO",
+      "priority": "LOW",
+      "dueDate": "2026-11-05T18:00:00.000Z",
+      "assignedTo": "usr-aissatou-004",
+      "createdById": "usr-sarah-002",
+      "createdAt": "2026-10-12T15:30:00.000Z",
+      "updatedAt": "2026-10-12T15:30:00.000Z"
+    },
+    {
+      "id": "tsk-008",
+      "projectId": "prj-cloud-migration",
+      "title": "Configuration du fichier render.yaml pour le backend",
+      "description": "Créer le service Web Node.js sur Render avec les variables d’environnement PORT, JWT_SECRET.",
+      "status": "IN_PROGRESS",
+      "priority": "HIGH",
+      "dueDate": "2026-10-23T18:00:00.000Z",
+      "assignedTo": "usr-mamadou-003",
+      "createdById": "usr-admin-001",
+      "createdAt": "2026-10-15T09:00:00.000Z",
+      "updatedAt": "2026-10-21T18:00:00.000Z"
+    },
+    {
+      "id": "tsk-009",
+      "projectId": "prj-cloud-migration",
+      "title": "Déploiement du backoffice React sur Vercel",
+      "description": "Connecter le repository Git à Vercel et configurer la redirection API de test vers Render.",
+      "status": "TODO",
+      "priority": "HIGH",
+      "dueDate": "2026-10-19T18:00:00.000Z",
+      "assignedTo": "usr-admin-001",
+      "createdById": "usr-admin-001",
+      "createdAt": "2026-10-16T14:00:00.000Z",
+      "updatedAt": "2026-10-16T14:00:00.000Z"
+    }
+  ]
+}
