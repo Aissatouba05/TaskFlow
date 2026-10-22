@@ -5,11 +5,11 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://taskflow-backend.onrender.com/api/$1"
+      "destination": "https://taskflow-u1j7.onrender.com/api/$1"
     },
     {
       "source": "/api-docs",
-      "destination": "https://taskflow-backend.onrender.com/api-docs"
+      "destination": "https://taskflow-u1j7.onrender.com/api-docs"
     },
     {
       "source": "/(.*)",
